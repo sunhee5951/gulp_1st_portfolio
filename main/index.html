@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title> 1번째기업형 </title>
+    <script src="https://kit.fontawesome.com/60d42fd791.js" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="css/style.css">
+    <script src="static/jquery-1.8.3.min.js"></script>
+	<script type="text/javascript" src="static/jquery.easing.1.3.js"></script> 
+    <script src="js/main/header/myScroll.js"></script>
+    <script src="js/main/header/header.js"></script>
+    <script src="js/main/news/news.js"></script>
+    <script src="js/main/visual/visual.js"></script>
+    <script src="js/main/content/content.js"></script>
+	<link href="https://fonts.googleapis.com/css2?family=Didact+Gothic&family=Lora:wght@500&family=Nunito+Sans:wght@300&family=Nunito:wght@300&family=Roboto+Slab:wght@100&family=Alegreya+Sans&&family=Prata&family=Enriqueta&family=DM+Serif+Text&display=swap" rel="stylesheet">
+	<script>
+        $(document).ready(function(){
+            $('.myScroll').myScroll({
+                btns : '#navi>li',
+                speed : 1000,
+                base : -300,
+                active : 'on'
+			});
+        });
+    </script>
+</head>
+<body>
+    <ul id="navi">
+        <li class='on'><a href="#header" >visual</a></li>
+        <li><a href="#banner">banner</a></li>
+		<li><a href="#content">content</a></li>
+		<li><a href="#icon">icon</a></li>
+		<li><a href="#news">news</a></li>
+    </ul>
+    
+    <include src="header/header.html"></include>
+    <include src="gnbMenu/gnbMenu.html"></include>
+    <include src="visual/visual.html"></include>
+    <include src="banner/banner.html"></include>
+    <include src="content/content.html"></include>
+    <include src="icon/icon.html"></include>
+    <include src="news/news.html"></include>
+    <include src="bottom/bottom.html"></include>
+    <include src="footer/footer.html"></include>
+
+    
+</body>
+</html>
+
+
+

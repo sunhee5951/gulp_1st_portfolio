@@ -1,0 +1,71 @@
+#footer {
+    width:100%;  background:rgb(255, 196, 0);
+
+    .inner {
+        width:1180px; margin:0px auto;
+        
+        .upper {width:100%; padding:50px 0px 20px; border-bottom:1px solid #333;
+        
+            &::after {content:''; display:block; clear:both;}
+
+            .terms {float:left;
+                
+                li {float:left; margin-right:20px;
+                    
+                    a {font:bold 14px/1 'arial';font-family: 'Nunito Sans', sans-serif; color:#333;}
+                }
+            }
+            .sns {float:right;
+                li {float:left; margin-left:20px;
+                    a {font:20px/1 'arial'; color:#333;}
+                }
+            }
+        }
+
+        .lower {width:100%; padding:30px 0px 80px;
+            &::after {content:''; display :block; clear:both;}
+
+            h1 {float:left; font: bold 30px/1 'arial'; color:#333; width:30%;font-family: 'Nunito Sans', sans-serif;}
+
+            address {width:70%; float:right; font:bold 14px/1.2 'arial'; color:#444; margin-bottom:10px; text-align:right;font-family: 'Nunito Sans', sans-serif;}
+
+            p {width:70%; float:right; font:14px/1 'arial'; color:#444; text-align:right; font-family: 'Nunito Sans', sans-serif;}
+        }
+    }
+}
+
+
+//tablet
+@media screen and (max-width:$tablet){
+    #footer{
+        .inner{
+            width: 100%;
+
+            .upper {padding:30px 20px 20px; box-sizing:border-box;
+            
+                .terms {width:100%; margin-bottom:20px;}
+
+                .sns {float:left; width:100%;
+                    li {margin-left:0px; margin-right:20px;}  
+                }
+            }
+
+            .lower {padding:30px 20px 30px; box-sizing:border-box;
+            
+                h1 {width:100%; margin-bottom:20px;}
+                address {width:100%; text-align:left; margin-bottom:10px;}
+                p {width:100%; float:left; text-align:left;}
+            }
+        }
+    }
+    
+}
+//cellphone
+@media screen and (max-width:$cellphone){
+    
+}
+
+
+@media screen and (max-width:450px){
+#footer .inner .upper .terms  li{margin-right: 16px;}
+}  

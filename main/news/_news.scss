@@ -1,0 +1,136 @@
+#news {
+    width:100%; padding:180px 0px 450px; transition:0.5s;
+
+    .inner {width:1180px; margin:0px auto; position:relative;
+
+        &::before {content: ''; width: 45%; height: 30px; background: yellow; position: absolute; top: -2px; left: 50%; transform: translateX(-50%);} 
+    
+        h1 {font-size: 42px; color:#555; text-align:center; margin-bottom:20px; position: absolute; top: -25px; left: 49%; transform: translateX(-50%); width: 100%; height: 100%; font-family: 'Roboto Slab', serif;} 
+
+        >p {font:bold 15px/1 'arial'; color:#999; text-align:center; margin-bottom:80px; font-weight: 100; position: absolute; top: 50px; left: 50%; transform: translateX(-50%);  width: 100%; height: 100%;font-family: 'Nunito', sans-serif;} 
+
+        .wrap{
+            ul{
+                li{
+                    position: absolute; top: 130px; left: 0px; margin-top: 0%;
+                    article{
+                        width:380px; margin-right:20px; float:left; padding:20px; box-sizing:border-box; border:1px solid orange; opacity:0; transform:translateY(100px); transition:0.5s;
+
+                        &:hover {background: rgb(255, 196, 0);
+                            h2 {color: #ffffff;}
+                            p {color: #666;}
+                            a {color: #444;}
+                        }
+
+                        &:nth-last-child(1) {margin-right: 0px;}
+
+                        .pic {width:100%; height:200px; background:#555; margin-bottom:20px;
+                            img {width: 100%; height: 100%;}
+                        }
+
+                        h2 {font-size: 18px; color:orange; margin-bottom:10px; transition: 0.5s; font-family: 'Nunito Sans', sans-serif;}
+
+                        p {font-size: 14px; color:#777; margin-bottom:30px; font-family: 'Nunito', sans-serif;}
+
+                        a {font-size: 13px; color:orange; transition: 0.5s; font-family: 'Nunito', sans-serif;
+                            
+                            &:hover {text-decoration: underline;}
+                        }
+                    }
+                }
+            }
+
+            .newsBtn {position:absolute; bottom:-105px; right:0%; transform:translateX(-50%); z-index: 5; 
+                
+                a {display: block; width:20px; height:4px;  float:left; margin:5px; cursor:pointer; background:rgb(255, 196, 0); transition: 0.5s;opacity: 0; transform: translateY(-100px); transition: 0.5s; border-radius: 10px;
+                    
+                    &.on {width:60px; background:#555;}
+                }
+            }
+
+        }
+
+    }
+
+    &.on{
+        .inner{
+            .wrap{
+                ul{
+                    .abc
+                    {
+                        article{
+                            &:nth-of-type(1) {opacity:1!important; transform:translateY(0px)!important; transition: 0.5s 0.1s;}
+                        
+                            &:nth-of-type(2) {opacity:1!important; transform:translateY(0px)!important;  transition:0.5s 0.2s;}
+                        
+                            &:nth-of-type(3) {opacity:1!important; transform:translateY(0px)!important;  transition:0.5s 0.3s;}
+                        }
+                    }
+                }
+                .newsBtn{
+                    a {opacity: 1; transform: translateY(0px); transition: 0.5s 0.1s;}
+                }
+            }
+        }
+
+       
+   }
+
+   
+}
+
+
+
+//tablet
+@media screen and (max-width:$tablet){
+    #news { padding:180px 20px 350px; transition:0.5s; box-sizing:border-box;
+        
+        .inner {width:100%;
+            
+            h1 {margin-bottom:40px; font-size: 40px;}
+
+            &::before {top: 0px; left: 49%; width: 52%; height: 20px;}
+
+            .wrap{
+                ul{
+                    li{
+                        article{
+                            width:32%; margin-right:2%;
+        
+                            .pic {height:20vw;}
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+
+
+//cellphone
+@media screen and (max-width:$cellphone){
+    #news { padding:100px 20px 1250px; box-sizing: border-box;
+        .inner {
+                h1 {font-size: 30px;}
+                >p {font-size: 13px; top: 30px;}
+
+            &::before {top: -9px; width: 365px; height: 20px; left: 48%;}
+
+            .wrap{
+                ul{
+                    li{
+                        article{width:100%; margin-right:0%; margin-bottom:30px;
+                    
+                            .pic {height:50vw;}
+                        }
+                    }
+                }
+                .newsBtn {right:-15%;}
+            }
+        }
+    }
+}
+@media screen and (max-width:450px){
+#news .inner h1 {font-size: 27px;}
+#news .inner::before {width: 330px; left: 50%; }
+}  

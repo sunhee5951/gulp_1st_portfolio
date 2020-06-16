@@ -1,0 +1,122 @@
+.community {
+    width: 100%;
+
+    .inner {
+
+        img {width:100%; height:350px; background-position: bottom;}
+
+        >.searchBox { margin: 50px 0 60px; padding: 10px 55px;
+            border: 1px solid #e8e8e8; background: #fbfbfb; box-sizing: border-box; text-align: center;
+            
+            select {width:80px; height:40px; font:13px/1 'arial'; color:#555; margin-right:10px;
+                border: 1px solid #e8e8e8; box-sizing: border-box;}
+
+                input{
+                    &[type=text] {width:40%; height:40px; border: 1px solid #e8e8e8; margin-right:20px; padding:0px 20px; background:rgba(0,0,0,0.03);}
+                }
+            
+            button {border:none; background:#444; width:100px; height:40px; font:bold 14px/40px '맑은 고딕'; color:#fff; text-align:center; cursor:pointer; transition: 1s;
+                
+                :hover {background: #e8e8e8; color: #444;}
+            }
+        }
+
+        >table {width:100%; border-top:2px solid #555; border-bottom:2px solid #555; margin-bottom:50px;
+            
+            tr{
+                &:nth-of-type(even) {background:rgba(0,0,0,0.03);}
+
+                &:hover {box-shadow: 5px 0px 10px #aaa;
+                    &td {text-shadow: #aaa; 
+                        a {text-decoration:underline; font-weight:bold;}
+                    }
+                }
+
+                td {padding:20px; font:14px/1.3 '맑은 고딕'; color:#666; text-align:center; transition:0.5s;
+                    &:nth-of-type(2) {text-align:left;}
+                }
+
+                th {border-bottom:1px solid #666; font:bold 16px/1 '맑은 고딕'; color:#444; letter-spacing:1px; padding:20px;
+
+                    &:nth-of-type(1) {width:10%;}
+                    &:nth-of-type(2) {width:60%;}
+                    &:nth-of-type(3) {width:15%;}
+                    &:nth-of-type(4) {width:15%;}
+
+                }
+            }
+        }
+
+        >.pagination {width:100%; text-align:center;
+            &::after {content:''; display:block; clear:both;}
+
+            .numbers {display:inline-block;
+                
+                a {display:inline-block; width:30px; height:30px; border:1px solid #aaa; font:12px/30px 'arial'; color:#888; transition:0.5s; border-radius: 30px;
+                
+                    &:hover {background:#555; color:#fff;}
+                    &.on {background:#555; color:#fff;}
+
+                    i {font-size: 13px;}
+                }
+            }
+        }
+    }
+}
+
+//tablet
+@media screen and (max-width:$tablet){
+    .community{
+        >.inner{
+            >table{
+                tr{
+                    th{
+                        &:nth-of-type(1) {width:0%; display:none;}
+                        &:nth-of-type(2) {width:80%;}
+                        &:nth-of-type(3) {width:20%;}
+                        &:nth-of-type(4) {width:0%; display:none;}
+                    }
+
+                    td{
+                        &:nth-of-type(1) {display:none;}
+                        &:nth-of-type(4) {display:none;}
+                    }
+                }
+            }
+        }
+    }
+}
+//cellphone
+@media screen and (max-width:$cellphone){
+    .community{
+        >.inner{
+            >.searchBox {
+                text-align:left;
+
+                select {display:block; margin-right:0px; margin-bottom:10px;}
+
+                input{
+                    &[type=text] {width:100%; margin-right:0px; margin-bottom:10px;}
+                }
+
+                button {width:100%;}
+            }
+
+            >table{
+                tr{
+                    th{
+                        &:nth-of-type(2) {width:100%;}
+                        &:nth-of-type(3) {width:0%; display:none;}
+                    }
+                    td{
+                        &:nth-of-type(3) {display:none;}
+                    }
+                }
+            }
+
+            >.pagination{
+                .numbers{display: none;}
+            }
+        }
+    }
+}

@@ -1,0 +1,107 @@
+#banner {
+    width:100%; padding:120px 0px 150px; background:#fff; transition:0.5s;
+
+    .inner {
+        width:1180px; margin:0px auto; position:relative;
+        
+        >h1 {font:bold 22px/1; color:rgb(255, 196, 0); text-align:center; margin-bottom:10px; letter-spacing: 1px; opacity: 0; transform:translateY(-100px); transition: 0.5s;font-family: 'Didact Gothic', sans-serif;}
+
+        >p {font: 14px/1; font-family: 'Didact Gothic', sans-serif; color:#888; text-align:center; margin-bottom:70px; opacity: 0; transform:translateY(-100px); transition: 0.5s;
+        
+            &::after {content: ''; width: 50px; height: 3px; background: orange; position: absolute; top: 42px; left: 50%; transform: translateX(-50%); transition: 0.5s;}
+        }
+
+        .wrap{
+
+            article{
+                width:380px; margin-right:20px; float:left; position:relative; opacity: 0; transform:translateY(100px); transition: 0.5s;
+
+                .pic {width:110px; height:100px; position:absolute; top:-20px; left:0px;
+                
+                    img {width: 100%; height: 100%; background-size: cover;}
+                }
+
+                h2 {font:bold 16px/1 'arial'; color:#666; margin-left:120px; margin-right:45px; margin-bottom:5px; padding-top:10px;font-family: 'Nunito Sans', sans-serif;}
+
+                p {font:14px/1.2 'arial'; color:#888; margin-left:120px; margin-right:45px;font-family: 'Nunito Sans', sans-serif;}
+
+                .ico {display:block; width:40px; height:40px; border-radius:50%; background:rgb(255, 196, 0); position:absolute; top:50%; right:0px; margin-top:-20px; font-size:20px; color:#fff; text-align:center; line-height:40px; float:right;
+                
+                    &:hover {transform: scale(1.1); transition: 1s;}
+                }
+            }
+
+        }
+    }
+
+    &.on {
+        .inner{
+
+            >h1{opacity: 1; transform:translateY(0px)!important; transition: 0.5s 0.2s;}
+
+            >p  {opacity: 1; transform:translateY(0px)!important; transition: 0.5s 0.1s;}
+
+            .wrap{
+                article{
+                    &:nth-of-type(1) {opacity: 1; transform:translateY(0px)!important; transition: 0.5s 0.1s;}
+
+                    &:nth-of-type(2) {opacity: 1; transform:translateY(0px)!important; transition: 0.5s 0.2s;}
+
+                    &:nth-of-type(3) {opacity: 1; transform:translateY(0px)!important; transition: 0.5s 0.3s;}
+                }
+            }
+
+        }
+    }
+}
+
+//tablet
+@media screen and (max-width:$tablet){
+
+    #banner {
+        padding:120px 40px 100px; box-sizing:border-box;
+    
+        .inner {width:100%;
+        
+            .wrap{
+                article{
+                    width:32%; margin-right:2%;
+
+                    .pic {width:60%; height:160px; position:relative; margin-bottom:30px; transform: translateX(20%);}
+
+                    h2 {margin-left:0px; margin-right:0px;}
+
+                    p {margin-left:0px; margin-right:0px;}
+
+                    .ico { position:relative; top:0%; margin-top:10px; right: 40px;}
+                }
+            }
+        }
+    }
+}
+
+//cellphone
+@media screen and (max-width:$cellphone){
+
+    #banner {
+        padding:80px 50px 60px;
+
+        .inner{
+            .wrap{
+                article{
+                    width:100%; margin-right:0%; margin-bottom:50px;
+
+                    .pic {width: 40%; height:100px; left: 50%; transform: translateX(-50%);}
+                }
+            }
+        }
+    }
+}
+
+//iphone
+@media screen and (max-width:$iphone){
+#banner {padding: 80px 50px 0px;}
+#banner .inner .wrap article {margin-bottom: 80px;}
+#banner .inner .wrap article .ico {right: 0px;}
+  
+}

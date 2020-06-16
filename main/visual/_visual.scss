@@ -1,0 +1,94 @@
+#visual {
+    width: 100%; height: 100vh; position: relative; overflow: hidden; z-index: 1;
+
+    .panel {
+        width: calc(100% *3); height: 100%; margin-left: 0px; 
+        
+        >li {width: calc(100% /3); height: 100%; float: left; background-position: center; background-repeat: no-repeat; background-size: cover; position: relative;}
+
+            >img {min-width:100%; min-height:100%; width:auto; height:auto;
+                position:absolute; top:50%; left:50%; transform:translate(-50%,-50%);}
+    }
+
+    .navi {position: absolute; bottom: 5%; right: 5%; transform: translateX(-20%); z-index: 5;
+    
+        >li {width: 13px; height: 13px; background: rgba(255, 255, 255, 0.226); float: left; margin: 7px; cursor: pointer; border-radius: 13px; transition: 0.5s;
+            
+            &.on {width: 30px; background: #fff;}
+        }
+    }
+
+    #motionBox {width: 50%; height: 100%;
+        
+        div {width: 100%; height: 100%; position: absolute; top: 0px; left: 0px; z-index: 1; opacity: 1;
+            
+            .txt {width: 50%; height: 50%; position: absolute; top: 40%; left: 10%;  transition: 0.5s; opacity: 0;
+                
+                h1 {font: 70px/1 'arial'; font-weight: 300; color: #fff;  filter: blur(10px); transition: 1s;font-family: 'Prata', serif;}
+            }
+
+            .left {width: 40%; height: 60px; border: 10px solid orange; position: absolute; top: 70%; left: -15%; margin-left: -500px; opacity: 0; transition: 0.5s;}
+
+            .right {width: 40%; height: 60px; position:absolute; top: 74%; left: 24%;  opacity: 0; margin-left: 500px;  transition: 0.5s;
+
+                p {font: 20px/1 'arial'; font-family: 'Enriqueta', serif; color: #fff; letter-spacing: 1px;}
+
+                &::before {content: ''; width: 15%; height: 2px; background: #fff; position: absolute; top: 10px; left: -100px;}
+            
+            }
+
+            &.on {
+                opacity: 1; z-index: 2;
+
+                >.txt {opacity: 1;
+                    >h1 {filter: blur(0px);}
+                }
+
+                >.left {margin-left: 0px;  opacity: 1;}
+
+                >.right {margin-left: 0px;  opacity: 1;}
+            }
+        }
+    
+    }
+}
+
+//tablet
+@media screen and (max-width:$tablet){
+#motionBox {
+    .txt {
+        h1 {font-size: 60px;}
+    }
+
+    .left {width: 60%;}
+
+    .right {left: 43%; 
+        p {font-size: 18px; }
+
+        &::before {width: 75px; height: 2px;  top: 6px; left: -90px;}
+    }
+}
+
+
+}
+//cellphone
+@media screen and (max-width:$cellphone){
+#motionBox {
+
+    .right {width: 50%; left: 40%; 
+        p {font-size: 18px; }
+        
+        &::before {width: 75px; height: 2px;  top: 6px; left: -90px;}
+        }
+
+    }
+}
+
+@media screen and (max-width:450px){
+#visual #motionBox div .txt h1 {font-size: 60px;}
+#visual #motionBox div .left {left: -8%;}
+#visual #motionBox div .right {left: 39%;}
+#visual #motionBox div .right p {font-size: 15px;}
+#visual #motionBox div .right::before {width: 20%; left: -31px;}
+}  
+

@@ -1,0 +1,170 @@
+#skip {
+    a {
+        display:block; width:100%; height:50px; background:orange;
+        font:bold 16px/50px '돋움'; color:#fff; text-align:center;
+        position:fixed; top:-50px; left:0px; z-index:4;
+
+        &.on {top:0px;}
+    }
+}
+
+#header {
+    width:100%; position:absolute; z-index: 2;
+
+    .inner {
+        width:1180px; height:140px; position: relative; margin:0px auto; transition:0.5s;
+
+        h1 {
+            position:absolute; left:10%; top:23px; transform:translateX(-50%); z-index: 3;
+
+            a {
+                font:bold 28px/1 'arial'; color:#111;font-family: 'Nunito Sans', sans-serif;
+            }
+        }
+
+        nav{
+            div{
+                width: 20%; height: 100%; position: absolute; top: 0px; left: 0px; background: rgb(255, 196, 0);
+
+                p {
+                    position:absolute; left:64%; top:72px; transform:translateX(-50%); font:bold 13px/1 'arial';font-family: 'Nunito Sans', sans-serif;
+                }
+
+                .triangle1 {
+                    width: 0px; height: 0px; border:30px solid transparent;
+                    border-bottom:none; border-top-color:#000; opacity: 0.7;
+                    border-left: 18px solid transparent;
+                    border-right: 18px solid transparent; 
+                    position:absolute; left:33%; top:72px; transform:translateX(-50%);
+                }
+
+                .triangle2 {
+                    width: 0px; height: 0px; border:30px solid transparent;
+                    border-bottom:none; border-top-color:#eee; 
+                    border-left: 18px solid transparent;
+                    border-right: 18px solid transparent; 
+                    position:absolute; left:20%; top:72px; transform:translateX(-50%);
+                }
+            }
+
+            #gnb {
+                width:80%; position:absolute; bottom:0px; left:20%; border-top:1px solid rgb(255, 196, 0);
+
+                >li {
+                    width:calc(100%/ 7); height:60px; float:left; position:relative;
+
+                    >a {
+                        display:block; width:100%; height:100%; font:bold 14px/60px 'arial'; color:rgb(255, 196, 0); text-align:center; font-weight: 100;
+
+                        &:hover {
+                            color:#fff;
+                        }
+                        &.on {
+                            color:#fff;
+                        }
+
+                        >i {font-size: 10px; position: absolute; top: 25px; right: 8%;}
+                    }
+
+                    >ul {width: 100%; 
+                        position:absolute; left:0px; top:100%; display:none; z-index: 2;
+
+                        >li{
+                            width: 100%; height: 100%;
+                         
+                            >a {
+                                display:block; width:100%; height:49px; background:rgb(255, 196, 0); font:12px/49px 'arial'; color:#333; text-align:center;
+                            }
+                            &>:hover { background-color: #eee;
+                                color:orange;}
+                        }
+                    }
+
+                    &:last-child::after {display:none;}
+                }
+            }
+
+            #util1 {
+                position:absolute; top:30px; left:250px;
+
+                li {
+                    float:left;
+
+                    p {
+                        display:inline-block; padding:10px 30px; font:12px/1 'arial'; color:#ccc; letter-spacing:1px;
+                    }
+                }
+            }
+
+            #util2{
+                position:absolute; top:30px; right:0px;
+
+                li {float:left;
+                    a{display:inline-block; padding:10px 30px; font:12px/1 'arial'; color:#ccc; letter-spacing:1px;}
+                }
+            }
+
+        }
+
+        .search {
+            font-size:17px;  color:#eee; position:absolute; right:2%; bottom:14%; margin-top:-10px;
+        }
+
+        .btnCall{
+            display:block; width:30px; height:31px; position:absolute; top:50%; margin-top:-15px; right:20px; transform:scale(0.6); display:none;
+
+            >.top {display:block; width:30px; height:2px; background:#000; position:absolute; top:0px; left:0px; transition:top 0.5s 0s, transform 0.5s 0.5s;}
+
+            >.middle {display:block; width:30px; height:2px; background:#000; position:absolute; top:15px; left:0px; transition:all 0.5s 0.8s;}
+
+            >.bottom {display:block; width:30px; height:2px; background:#000; position:absolute; bottom:0px; left:0px; transition:bottom 0.5s 0s, transform 0.5s 0.5s;}
+
+            &.on {
+                .top{top:15px; transform:rotate(45deg);}
+                .middle {left:15px; width:0px;}
+                .bottom {bottom:15px; transform:rotate(-45deg);}
+            }
+        }
+
+
+    }
+}
+
+//tablet
+@media screen and (max-width:$tablet){
+#header{
+    .bgGnb{opacity: 0;}
+    .inner {
+        width:100%; height:80px; background: rgb(255, 196, 0); z-index: 4; position: relative;
+
+        h1 {
+            position:absolute; left:50%; top:20px; transform:translateX(-50%); z-index: 3;
+
+            a {font-size: 28px;} 
+        }
+
+        nav{
+            display:none;
+        }
+
+        .search {display: none;}
+
+        .btnCall {display: block;}
+
+        &.on{
+            >.top {top:15px; transform:rotate(45deg);}
+            >.middle {left:15px; width:0px;}
+            >.bottom {bottom:15px; transform:rotate(-45deg);}
+        }
+    }
+}
+}
+//cellphone
+@media screen and (max-width:$cellphone){
+    
+}
+
+
+
+
+

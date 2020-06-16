@@ -1,0 +1,123 @@
+<include src="../header/header.html"></include>
+
+<section class='content members'>
+
+    <div class="inner">
+        <div class="title">
+            <div class="wrap">
+                <h1>MEMBERS</h1>
+            </div>
+        </div>
+
+        <form action="/" method='post' id="join">
+            <fieldset>
+                <legend class='hidden'>회원가입</legend>
+                <h2>개인회원 이용약관</h2>
+                <div class="agreement">
+                    <textarea>Lorem ipsum dolor sit amet consectetur adipisicing elit. Pariatur molestiae repudiandae harum eaque voluptatum sunt, quae quasi odio earum quis dolores consequuntur nulla veritatis, perspiciatis inventore error! Maiores, facere quas? Lorem ipsum dolor sit amet consectetur adipisicing elit. Pariatur molestiae repudiandae harum eaque voluptatum sunt, quae quasi odio earum quis dolores consequuntur nulla veritatis, perspiciatis inventore error! Maiores, facere quas?Lorem ipsum dolor sit amet consectetur adipisicing elit. Pariatur molestiae repudiandae harum eaque voluptatum sunt, quae quasi odio earum quis dolores consequuntur nulla veritatis, perspiciatis inventore error! Maiores, facere quas? </textarea>
+
+                    <div class="agreeok">
+                        <p>
+                            <input type="checkbox" id="terms" name='terms'>
+                        <label for="terms">위의 내용을 읽어보았으며 동의합니다.</label>                        
+                        </p>
+                    </div>
+                </div>
+
+                <img src="{{sub.imgSrc}}/members/img/banner2.png">
+
+
+                <h2>기본 정보 입력</h2>
+                <table>
+                    <caption class="hidden">회원정보</caption>
+                    <tr>
+                        <th>
+                            <label for="userid">사용자 이름(*)</label>
+                        </th>
+                        <td>
+                            <input type="text" id='userid' name='userid' placeholder='아이디를 입력하세요' class="required">
+                            <a href="#">중복확인</a>
+                        </td>
+                    </tr>
+                    <tr>
+                        <th>
+                            <label for="pwd">비밀번호(*)</label>
+                        </th>
+                        <td>
+                            <input type="password" id='pwd' name='pwd' placeholder="패스워드를 입력하세요" class="required">
+                            <span>숫자, 영문 조합으로 8자 이상으로 입력해주세요.</span>
+                        </td>
+                    </tr>
+                    <tr>
+                        <th>
+                            <label for="pwd2">비밀번호 확인(*)</label>
+                        </th>
+                        <td>
+                            <input type="password" id='pwd2' name='pwd2' placeholder="패스워드를 재입력하세요" class="required">
+                        </td>
+                    </tr>
+                    <tr>
+                        <th>
+                            <label for="email">E-Mail(*)</label>
+                        </th>
+                        <td>
+                            <input type="text" id='email' name='email' placeholder='이메일 아이디를 입력하세요' class="required">
+                            @
+                            <select name="domain" id="domain">
+                                <option value="nate.com" selected>nate.com</option>
+                                <option value="naver.com">naver.com</option>
+                                <option value="google.com">google.com</option>
+                            </select>
+                            <p>
+                                <input id="emailcheck" type="checkbox" checked="" value="y">
+                                <label for="emailcheck">이메일 정보 수신 동의</label>
+                            </p>
+                        </td>
+                    </tr>
+                    <tr>
+                        <th>
+                            <label for="phone">휴대폰 번호</label>
+                        </th>
+                        <td>
+                            <select name="phone" id="phone">
+                                <option value="010" selected>010</option>
+                                <option value="016">016</option>
+                                <option value="019">019</option>
+                            </select>
+                            -
+                            <input type="text" id='phone' name='phone'>
+                            -
+                            <input type="text" id='phone' name='phone'>
+                        </td>
+                    </tr>
+                    <tr>
+                        <th>
+                            <label for="address">주소</label>                       
+                        </th>
+                        <td>
+                            <input type="text"" id='address' name='address'>
+                            -
+                            <input type="text" id='address' name='address'>
+                            <a href="#">주소찾기</a>
+                            <br>
+                            <input type="text" id='longaddress' name='address' placeholder="상세주소를 입력해주세요.">
+                        </td>
+                    </tr>
+                    <tr>   
+                        <th></th>                        
+                        <td colspan='2'>
+                            <input type="reset" value='취소'>
+                            <input type="submit" value='확인'>
+                        </td>
+                    </tr> 
+                                   
+                </table>
+            </fieldset>
+        </form>
+
+
+
+    </div>
+</section>
+
+<include src="../footer/footer.html"></include>

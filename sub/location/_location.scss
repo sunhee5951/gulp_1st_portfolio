@@ -1,0 +1,79 @@
+
+.location{
+    &::after {content: ''; display: block; clear: both;}
+
+    .info {padding: 0px 20px; box-sizing: border-box; margin-bottom: 180px;
+        
+        h1 {padding: 0px 0 30px; color: #111; font-size: 30px;text-align: center; font-weight: 30; border-bottom: 1px solid #aaa; }
+
+        .infobox {width: 1180px; float: left; margin-top: 30px; padding: 0px 30px; box-sizing: border-box;
+            
+            &::after {content: ''; display: block; clear: both;}
+
+            h2 {display: block; width: 280px; height: 120px; font-size: 25px; color: #555;padding-bottom: 25px;  font-weight: 30; float: left;
+                
+                ::after {content: ''; display:block;  width: 40px; height: 3px; background:#444; margin-top:14px; }
+            }
+
+            .info1{
+                float: left; transition: 0.5s;
+
+                p {margin: 0px 0px 10px; font: 14px/1 'arial'; color: #555;
+                    
+                    span {display: inline-block; width: 50px; height: 25px; line-height: 25px;  color: #9e1c4e; border: 1px solid #9e1c4e; margin-right: 10px; text-align: center; }
+                }
+            }
+
+            .info2 {float: right; transition: 0.5s;
+                
+                span {display: inline-block; width: 70px; height: 25px; line-height: 25px;  color: #9e1c4e; border: 1px solid #9e1c4e; margin-right: 10px; text-align: center; font-size: 14px; }
+
+                ul{
+                    li {font-size: 14px; color: #555; line-height: 25px; margin-bottom: 5px; margin-top: 10px; list-style:  inside;}
+                }
+            }
+        }
+    }
+
+    #map {width: 100%; height: 500px; border: 1px solid #111; position: relative; box-sizing: border-box; filter: (0.5); transition: 1s; margin-bottom: 10px;
+    
+        &:hover {filter: grayscale(0);} 
+    }
+    span#branch1{
+        display: inline-block; width: 50px; height: 25px; line-height: 25px;  color: #9e1c4e; border: 1px solid #9e1c4e; margin-right: 5px; text-align: center; cursor: pointer;
+    }
+    span#branch2{
+        display: inline-block; width: 50px; height: 25px; line-height: 25px;  color: #9e1c4e; border: 1px solid #9e1c4e; text-align: center; cursor: pointer;
+    }
+
+}
+
+
+//tablet
+@media screen and (max-width:$tablet){
+    .location{
+        .info{
+            h1{
+                font-size: 25px; margin-top: 70px;
+            }
+
+            .infobox {width: 100%; padding: 30px 20px; box-sizing: border-box;
+                
+                h2 {height: 50px; }
+                .info1 {margin-right: 20px;}
+                .info2 {float: left; transition: 0.5s;}
+            }
+        }
+    }
+}
+
+//cellphone
+@media screen and (max-width:$cellphone){
+    .location{
+        .infobox{
+            h2{
+                height: 50px;
+            }
+        }
+    }
+}
