@@ -12,7 +12,7 @@ $(document).ready(function(){
     var version = navigator.userAgent; 
     //console.log(version);
 
-    /*--------------------------이벤트 바인딩------------------------- */
+    /*--------------------------크로스브라우징------------------------- */
     if(  /edge/i.test(version) && /chrome/i.test(version)  ){
         $('body').addClass('edge');
     }
@@ -23,6 +23,7 @@ $(document).ready(function(){
         $('body').addClass('chrome');
     }
 
+/*--------------------------이벤트 바인딩------------------------- */
     setTimeout(function(){
         var $grid = $('.imgList').isotope({   // 모션적용될 박스의 부모태그 선택자
             itemSelector : "article",  //모션적용될 박스선택자

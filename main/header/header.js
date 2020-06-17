@@ -72,7 +72,7 @@ $(document).ready(function(){
         var isBgGnb = $('.bgGnb').length;
 
         if(!isBgGnb){
-            $('header>.inner').prepend(
+            $('#header>.inner').prepend(
                 $('<div class="bgGnb">').css({
                     width:'100%', height:ht_max,
                     backgroundColor:bgColor,
